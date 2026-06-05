@@ -1,37 +1,37 @@
-import { Ionicons } from "@expo/vector-icons";
-import { ImageBackground, StyleSheet, View } from "react-native";
+import { ImageBackground, Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
     <ImageBackground
       source={require("../assets/background.png")}
-      style={styles.background}
+      className="flex-1 items-center"
     >
-      <View style={styles.content}>
-        <Ionicons name="shield-checkmark" size={35} color="#4DA3FF" />
+      <View className="mt-10">
+        <View className="m-3 h-[6] bg-[#1C2431] w-28 rounded-2xl">
+          <View className="bg-[#4DA3FF] h-full w-10 rounded-2xl"></View>
+        </View>
+
+        <Text className="text-white text-4xl font-semibold">
+          What are you working on?
+        </Text>
+        <Text className="text-[#9AA4B2] text-lg">
+          Select the areas you want to improve.
+        </Text>
+      </View>
+      <View className="w-full flex gap-5 flex-row mt-10 justify-around ">
+        <View className="gap-5">
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+        </View>
+        <View className="gap-5">
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+          <View className="h-40 w-48 bg-[#121821] rounded-3xl border border-[#1E2530]"></View>
+        </View>
       </View>
     </ImageBackground>
   );
 }
-
-const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    alignItems: "center",
-  },
-  content: {
-    display: "flex",
-
-    width: 80,
-    backgroundColor: "#121821",
-    marginTop: 200,
-    borderWidth: 4,
-    borderColor: "#1E2530",
-    padding: 10,
-    borderRadius: 30,
-  },
-  text: {
-    color: "white",
-    fontSize: 24,
-  },
-});
