@@ -9,9 +9,9 @@ export default function RootLayout() {
     <SafeAreaProvider>
       <Stack>
         <Stack.Screen name="index" options={{ headerShown: false }} />
-
-        <StatusBar style="auto" />
+        <Stack.Screen name="on-boarding" options={{ headerShown: false }} />
       </Stack>
+      <StatusBar style="auto" />
     </SafeAreaProvider>
   );
 }

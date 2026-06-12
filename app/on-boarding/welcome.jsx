@@ -1,13 +1,17 @@
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import {
-    ImageBackground,
-    Pressable,
-    StyleSheet,
-    Text,
-    View,
+  ImageBackground,
+  Pressable,
+  StyleSheet,
+  Text,
+  View,
 } from "react-native";
 
 export default function WelcomeScreen() {
+  const onboarding = () => {
+    router.push("/on-boarding/step1");
+  };
   return (
     <ImageBackground
       source={require("../../assets/background.png")}
@@ -28,6 +32,7 @@ export default function WelcomeScreen() {
         <Pressable
           className="w-[95%] p-5 font-semibold text-lg py-4 rounded-2xl"
           style={{ backgroundColor: "#4DA3FF", color: "#F9FAFB" }}
+          onPress={onboarding}
         >
           <Text className="text-center text-[#F9FAFB] text-xl font-medium">
             Get started
